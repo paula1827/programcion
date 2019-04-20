@@ -121,3 +121,62 @@ public class calculadora {
 		
 }
 	}
+--------------------------------------------------------------------------------------------------------------------------
+	
+public class pi {
+
+	public int suma (int num1, int num2) {
+		int resultado = 0;
+		resultado = num1 + num2;
+		return resultado;
+	}
+	public int resta (int num1, int num2) {
+		int resultado = 0;
+		resultado = num1 - num2;
+		return resultado;
+	}
+	public int multiplicacion (int num1, int num2) {
+		int resultado = 0;
+		for (int i=1; i<=num2;i++) {
+			resultado = resultado + num1;	
+		}
+		return resultado;
+	}
+	public double division(int num1, int num2) {
+		if(num2 !=0) {
+			return num1/(num2+1.0);
+		}
+		else {
+			return Double.NaN;
+		}
+	}
+	public double porcentaje(int num, double porc) {
+		if(porc >= 0.0 && porc <= 1.0) {
+			return num*porc;
+		}
+		else {
+			return Double.NaN;
+		}
+	}
+	public int maximo (int num1, int num2, int num3) {
+		if(num1>num2) {
+			if (num1>num3) {
+				System.out.println("El mayor es:"+num1);
+			} 
+			else {
+				System.out.println("El mayor es:"+num3);
+				}
+					 }
+			else
+				if	(num2>num3) {
+					System.out.println("El mayor es:"+num2);
+								} 
+			else {
+				System.out.println("El mayor es:"+num3);
+				}
+			return num1*num2*num3;
+	}
+	public int promedio_valores(int num1, int num2, int num3, int num4, int num5) {
+		return num1+num2+num3+num4+num5/5;
+	}
+}
