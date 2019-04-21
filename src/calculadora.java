@@ -180,3 +180,50 @@ public class pi {
 		return num1+num2+num3+num4+num5/5;
 	}
 }
+--------------------------------------------------------------------------------------------------------------------------
+	package uri_ejercicios;
+import java.io.*;
+
+public class ejercicios {
+
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader( new InputStreamReader( System.in ));
+		BufferedWriter bw = new BufferedWriter( new OutputStreamWriter( System.out ));
+		
+		try
+		{
+			//Aca debe estar la logica que usted propone para resolver el problema
+			//Leer de entero: int x = Integer.parseInt( br.readLine() )		
+			int matriz [][] = new int [22][4]; //matriz de 4 columnas y 22 filas
+			for (int i=0;i<22;i++) { //22 es la cantidad de estudiantes
+				for(int j=0;j<4;j++) { //son 4 las notas de los estudiantes
+					
+					if(i==0 || i==21) { //asignar el valor en cada fila
+						matriz[i][j] = 0;
+					}
+					else
+						if (j==0 || j==3) { //asignar el valor en cada columna
+						matriz[i][j] = 1;
+					}
+					else {
+						matriz [i][j] = 0;
+					}
+				}
+			}
+			
+			System.out.println("La matriz es: \n");
+			for (int i=0;i<22;i++) {
+				for (int j=0;j<4;j++) {
+					System.out.print(matriz[i][j]+" ");
+				}
+				System.out.println(" ");
+			}
+			bw.flush();
+		}
+		catch(Exception ex) 
+		{
+			ex.printStackTrace();
+		}
+	}
+		
+}
