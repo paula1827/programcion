@@ -1,0 +1,56 @@
+package notas;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.*;
+/**
+ *
+ * @author general
+ */
+public class Notas {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        
+        double min=5.0,max=0.0,promedio=0.0;
+        try 
+        {
+            int estudiantes = Integer.parseInt(br.readLine());
+            double [] notas = new double [ estudiantes ];
+        
+        
+            for (int i = 0; i< estudiantes; i++){
+                notas[i] = Double.parseDouble(br.readLine());
+       
+            }
+            for(int i = 0;i< estudiantes; i++){
+                if (notas[i]<min){
+                    min = notas [i];
+                }
+                if (notas[i]>max){
+                    max = notas [i];
+                }
+                 promedio = promedio + notas [i];
+            }
+            
+            promedio = promedio / estudiantes; 
+            bw.write("\n La mayor nota es: " + max);
+            bw.write ("\n La menor nota es: "+ min);
+            bw.write ("\n El promedio de la nota es: "+ promedio);
+            bw.flush ();
+        }
+        catch (Exception ex) {}
+        }
+                
+     }
+
+        
+
+
+    
