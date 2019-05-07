@@ -1,0 +1,29 @@
+import java.io.*;
+ 
+public class Basico
+{
+    public static void main(String args[])
+    {
+        BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
+        BufferedWriter bw = new BufferedWriter (new OutputStreamWriter (System.out));
+    
+        try 
+        {
+        
+         int a,b;
+         
+            a= Integer.parseInt(br.readLine());
+            b= Integer.parseInt(br.readLine());
+            
+            int x = a + b;
+             
+             bw.write("El resultado es: "+ x );
+             bw.flush();
+        }
+   
+        catch (Exception e)
+        {
+        e.printStackTrace();
+        }
+    }
+}
